@@ -85,7 +85,7 @@ export class GameConstants {
   public static readonly ZONES = {
     GAME_ZONE: 'game-zone',
     NEXT_BLOCK_ZONE: 'next-block-zone',
-    SCORE_ZONE: 'score-zone',
+    SCORE_PROFILE_ZONE: 'score-profile-zone',
     HOLD_BLOCK_ZONE: 'hold-block-zone',
   };
   /**
