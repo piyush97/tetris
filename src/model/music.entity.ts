@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Level } from './level.entity';
 /**
  * The music model
  *
@@ -45,6 +46,6 @@ export class Music {
    * @type {number}
    * @memberof Music
    */
-  @Column({ default: 1 })
+  @OneToOne(() => Level, (Level) => Level.number)
   stressLevel: number;
 }

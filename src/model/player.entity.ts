@@ -24,22 +24,6 @@ export class Player {
   @Column()
   name: string;
   /**
-   * Score of the player (current)
-   *
-   * @type {number}
-   * @memberof Player
-   */
-  @Column({ default: 0 })
-  score: number;
-  /**
-   * Highscore of the player (highest)
-   *
-   * @type {number}
-   * @memberof Player
-   */
-  @Column({ default: 0 })
-  highScore: number;
-  /**
    * Is the player active?
    *
    * @type {boolean}
