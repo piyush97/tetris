@@ -23,24 +23,24 @@ export class GameService implements IScreen {
   ): Zone {
     return new Zone(zoneType, height, width, backgroundColor);
   }
-  setAllZones(): any[] {
+  setAllZones(): Zone[] {
     return [
-      this.setGameZone,
-      this.setHoldZone,
-      this.setScoreProfileZone,
-      this.setHoldZone,
+      this.setGameZone(),
+      this.setHoldZone(),
+      this.setScoreProfileZone(),
+      this.setHoldZone(),
     ];
   }
-  setGameZone(): void {
-    this.setZone(
+  setGameZone(): Zone {
+    return this.setZone(
       GameConstants.ZONES.GAME_ZONE,
       GameConstants.GAME_HEIGHT,
       GameConstants.GAME_WIDTH,
       GameConstants.GAME_BACKGROUND_COLOR,
     );
   }
-  setHoldZone(): void {
-    this.setZone(
+  setHoldZone(): Zone {
+    return this.setZone(
       GameConstants.ZONES.HOLD_BLOCK_ZONE,
       GameConstants.HOLD_ZONE_HEIGHT,
       GameConstants.HOLD_ZONE_WIDTH,
@@ -48,16 +48,16 @@ export class GameService implements IScreen {
     );
   }
 
-  setScoreProfileZone(): void {
-    this.setZone(
+  setScoreProfileZone(): Zone {
+    return this.setZone(
       GameConstants.ZONES.SCORE_PROFILE_ZONE,
       GameConstants.SCORE_PROFILE_ZONE_HEIGHT,
       GameConstants.SCORE_PROFILE_ZONE_WIDTH,
       GameConstants.GAME_BACKGROUND_COLOR,
     );
   }
-  setNextZon(): void {
-    this.setZone(
+  setNextZon(): Zone {
+    return this.setZone(
       GameConstants.ZONES.NEXT_BLOCK_ZONE,
       GameConstants.HOLD_ZONE_HEIGHT,
       GameConstants.HOLD_ZONE_WIDTH,

@@ -42,10 +42,21 @@ export class StartScreenService {
   showInstructions(): void {
     this.ConfirmInstructions() ? this.startGame() : this.deniedPopup();
   }
+  /**
+   * Start the game.
+   *
+   * @return {*}  {void}
+   * @memberof StartScreenService
+   */
   startGame(): void {
-    return console.log('Start game');
+    return this.startGame();
   }
-
+  /**
+   * Show the denied popup.
+   *
+   * @return {*}  {Error}
+   * @memberof StartScreenService
+   */
   deniedPopup(): Error {
     throw new Error(
       'Please accept the instructions to start the game. Thank you!',
