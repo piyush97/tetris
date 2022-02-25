@@ -23,8 +23,13 @@ export class GameService implements IScreen {
   ): Zone {
     return new Zone(zoneType, height, width, backgroundColor);
   }
-  setAllZones(): void {
-    throw new Error('Method not implemented.');
+  setAllZones(): any[] {
+    return [
+      this.setGameZone,
+      this.setHoldZone,
+      this.setScoreProfileZone,
+      this.setHoldZone,
+    ];
   }
   setGameZone(): void {
     this.setZone(
@@ -33,5 +38,33 @@ export class GameService implements IScreen {
       GameConstants.GAME_WIDTH,
       GameConstants.GAME_BACKGROUND_COLOR,
     );
+  }
+  setHoldZone(): void {
+    this.setZone(
+      GameConstants.ZONES.HOLD_BLOCK_ZONE,
+      GameConstants.HOLD_ZONE_HEIGHT,
+      GameConstants.HOLD_ZONE_WIDTH,
+      GameConstants.GAME_BACKGROUND_COLOR,
+    );
+  }
+
+  setScoreProfileZone(): void {
+    this.setZone(
+      GameConstants.ZONES.SCORE_PROFILE_ZONE,
+      GameConstants.SCORE_PROFILE_ZONE_HEIGHT,
+      GameConstants.SCORE_PROFILE_ZONE_WIDTH,
+      GameConstants.GAME_BACKGROUND_COLOR,
+    );
+  }
+  setNextZon(): void {
+    this.setZone(
+      GameConstants.ZONES.NEXT_BLOCK_ZONE,
+      GameConstants.HOLD_ZONE_HEIGHT,
+      GameConstants.HOLD_ZONE_WIDTH,
+      GameConstants.GAME_BACKGROUND_COLOR,
+    );
+  }
+  onGameStart(): any[] {
+    return this.setAllZones();
   }
 }

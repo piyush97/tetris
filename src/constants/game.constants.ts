@@ -145,12 +145,32 @@ export class GameConstants {
    */
   public static readonly HOLD_ZONE_HEIGHT = 4;
 
+  /**
+   * Greetings Text
+   *
+   * @static
+   * @memberof GameConstants
+   */
   public static readonly GREETING_TEXST =
     'Welcome to Tetris! Press spacebar to start.';
 
+  /**
+   * Instructions Text
+   *
+   * @static
+   * @memberof GameConstants
+   */
   public static readonly INSTRUCTIONS_TEXT =
     ' Use the arrow keys to move the block.\n' +
     ' Use the spacebar to rotate the block.\n';
-
+  /**
+   * Game Background Color
+   *
+   * @static
+   * @memberof GameConstants
+   */
   public static readonly GAME_BACKGROUND_COLOR = '#000000';
+
+  public static readonly SCORE_PROFILE_ZONE_WIDTH = 4;
+  public static readonly SCORE_PROFILE_ZONE_HEIGHT = 1;
 }
