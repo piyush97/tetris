@@ -2,11 +2,11 @@ import { Controller, Get } from '@nestjs/common';
 import { StartScreenService } from '../service/startscreen.service';
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: StartScreenService) {}
+export class StartScreenController {
+  constructor(private readonly startScreenService: StartScreenService) {}
 
-  @Get()
+  @Get('/game')
   getHello(): string {
-    return this.appService.getHello();
+    return this.startScreenService.getHello();
   }
 }

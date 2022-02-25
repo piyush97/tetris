@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class StartScreenService {
+export class PlayerService {
   getHello(): string {
-    return 'Tetris!';
+    return 'Hello Player!';
   }
 }
