@@ -1,40 +1,19 @@
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+
 /**
  * The player model
  *
  * @class Player
  */
+@Entity('player')
 export class Player {
-  /**
-   * Creates an instance of Player. This is the constructor.
-   * @param {number} id
-   * @param {string} name
-   * @param {number} score
-   * @param {number} highScore
-   * @param {boolean} isActive
-   * @param {number} currentLevel
-   * @memberof Player
-   */
-  constructor(
-    id: number,
-    name: string,
-    score: number,
-    highScore: number,
-    isActive: boolean,
-    currentLevel: number,
-  ) {
-    this.id = id;
-    this.name = name;
-    this.score = score;
-    this.highScore = highScore;
-    this.isActive = isActive;
-    this.currentLevel = currentLevel;
-  }
   /**
    * Id of the player (unique)
    *
    * @type {number}
    * @memberof Player
    */
+  @PrimaryGeneratedColumn()
   id: number;
   /**
    * Name of the player
@@ -42,6 +21,7 @@ export class Player {
    * @type {string}
    * @memberof Player
    */
+  @Column()
   name: string;
   /**
    * Score of the player (current)
@@ -49,6 +29,7 @@ export class Player {
    * @type {number}
    * @memberof Player
    */
+  @Column({ default: 0 })
   score: number;
   /**
    * Highscore of the player (highest)
@@ -56,6 +37,7 @@ export class Player {
    * @type {number}
    * @memberof Player
    */
+  @Column({ default: 0 })
   highScore: number;
   /**
    * Is the player active?
@@ -63,6 +45,7 @@ export class Player {
    * @type {boolean}
    * @memberof Player
    */
+  @Column({ default: true })
   isActive: boolean;
   /**
    * Current level of the player (current) (1-10)
@@ -70,5 +53,6 @@ export class Player {
    * @type {number}
    * @memberof Player
    */
+  @Column({ default: 0 })
   currentLevel: number;
 }
