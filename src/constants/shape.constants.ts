@@ -1,6 +1,6 @@
 export class ShapeConstants {
   /**
-   * Tells what type of shape is this.
+   * Tells what type of shape is this tetramino
    *
    * @static
    * @memberof ShapeConstants

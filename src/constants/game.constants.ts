@@ -88,4 +88,45 @@ export class GameConstants {
     SCORE_ZONE: 'score-zone',
     HOLD_BLOCK_ZONE: 'hold-block-zone',
   };
+  /**
+   * Font style (font-family) for the game
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static font = {
+    font: '16px Arial',
+    fill: '#ffffff',
+    align: 'center',
+  };
+  /**
+   * HOLD KEY (key code) input pressed
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static HOLD_KEY = 'H';
+
+  /**
+   * Music volume (0-1) (default: 0.5)
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static readonly MUSIC_VOLUME = 0.5;
+  /**
+   * Sound volume (0-1) (default: 0.5)
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static readonly SOUND_VOLUME = 0.5;
+
+  /**
+   * Points needed to enter next level
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static readonly POINTS_FOR_LEVEL_CHANGE = 1000;
 }
