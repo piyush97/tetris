@@ -76,4 +76,16 @@ export class GameConstants {
     GAME_STATE_PAUSE: 'pause',
     GAME_STATE_END: 'end',
   };
+  /**
+   * Zones (Screen zones in the game screen)
+   *
+   * @static
+   * @memberof GameConstants
+   */
+  public static readonly ZONES = {
+    GAME_ZONE: 'game-zone',
+    NEXT_BLOCK_ZONE: 'next-block-zone',
+    SCORE_ZONE: 'score-zone',
+    HOLD_BLOCK_ZONE: 'hold-block-zone',
+  };
 }

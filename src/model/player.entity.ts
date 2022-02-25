@@ -55,4 +55,13 @@ export class Player {
    */
   @Column({ default: 0 })
   currentLevel: number;
+
+  /**
+   * lines cleared by the player (current)
+   *
+   * @type {number}
+   * @memberof Player
+   */
+  @Column({ default: 0 })
+  lines: number;
 }
