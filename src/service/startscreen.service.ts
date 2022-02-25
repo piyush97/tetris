@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
+import { Zone } from 'src/model/zone.entity';
 import { GameConstants } from './../constants/game.constants';
 import { Player } from './../model/player.entity';
+import { GameService } from './game.service';
 /**
  * Startscreen service class for the startscreen module of the game.
  *
@@ -9,6 +11,7 @@ import { Player } from './../model/player.entity';
  */
 @Injectable()
 export class StartScreenService {
+  constructor(private gameService: GameService) {}
   /**
    * Get the game mode from the start screen.
    *
@@ -48,11 +51,11 @@ export class StartScreenService {
    * @return {*}  {void}
    * @memberof StartScreenService
    */
-  startGame(): void {
-    return this.startGame();
+  startGame(): Zone[] {
+    return this.gameService.setAllZones();
   }
   /**
-   * Show the denied popup.
+   * Show the denied popup.`
    *
    * @return {*}  {Error}
    * @memberof StartScreenService

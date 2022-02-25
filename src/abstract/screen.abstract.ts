@@ -1,4 +1,5 @@
-export class IScreen {
+import { Zone } from 'src/model/zone.entity';
+export interface IScreen {
   /**
    * Height of the screen zone in blocks
    *
@@ -26,11 +27,11 @@ export class IScreen {
    * @param {string} zoneType
    * @memberof IScreen
    */
-  setZone(zoneType: any, height: number, width: number, bgColor: string): void;
+  setZone(zoneType: any, height: number, width: number, bgColor: string): Zone;
   /**
    * Setup all the zones on the game console screen
    *
    * @memberof IScreen
    */
-  setAllZones(): void;
+  setAllZones(): Zone[];
 }
