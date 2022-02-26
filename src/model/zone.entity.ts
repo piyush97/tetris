@@ -1,9 +1,12 @@
+import { Entity } from 'typeorm';
+
 /**
  * Zone type in screen
  *
  * @export
  * @class Zone
  */
+@Entity('zone')
 export class Zone {
   /**
    * Creates an instance of Zone.

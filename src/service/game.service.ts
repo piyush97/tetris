@@ -53,11 +53,10 @@ export class GameService implements IScreen {
   /**
    * Set the game zone.
    *
-   * @private
    * @return {*}  {Zone}
    * @memberof GameService
    */
-  private setGameZone(): Zone {
+  setGameZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.GAME_ZONE,
       GameConstants.GAME_HEIGHT,
