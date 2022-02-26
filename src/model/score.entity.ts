@@ -16,7 +16,7 @@ export class Score {
    * @memberof Score
    */
   @OneToMany(() => Player, (player) => player.id)
-  id: number;
+  private id: number;
 
   /**
    * Score of the player (current)
@@ -25,7 +25,7 @@ export class Score {
    * @memberof Score
    */
   @Column()
-  score: number;
+  private score: number;
 
   /**
    * Highscore of the player (highest)
@@ -34,5 +34,5 @@ export class Score {
    * @memberof Score
    */
   @Column()
-  highScore: number;
+  private highScore: number;
 }

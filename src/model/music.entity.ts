@@ -15,7 +15,7 @@ export class Music {
    * @memberof Music
    */
   @PrimaryGeneratedColumn()
-  id: number;
+  private id: number;
   /**
    * Name of the music
    *
@@ -23,7 +23,7 @@ export class Music {
    * @memberof Music
    */
   @Column()
-  name: string;
+  private name: string;
   /**
    * Path of the music
    *
@@ -31,7 +31,7 @@ export class Music {
    * @memberof Music
    */
   @Column()
-  fileName: string;
+  private fileName: string;
   /**
    * Music's artist
    *
@@ -39,7 +39,7 @@ export class Music {
    * @memberof Music
    */
   @Column()
-  artist: string;
+  private artist: string;
   /**
    * Music's stress level (1-10)
    *
@@ -47,5 +47,5 @@ export class Music {
    * @memberof Music
    */
   @OneToOne(() => Level, (Level) => Level.number)
-  stressLevel: number;
+  private stressLevel: number;
 }

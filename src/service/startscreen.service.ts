@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Zone } from 'src/model/zone.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { GameConstants } from './../constants/game.constants';
 import { Player } from './../model/player.entity';
 import { GameService } from './game.service';
@@ -11,27 +12,37 @@ import { GameService } from './game.service';
  */
 @Injectable()
 export class StartScreenService {
-  constructor(private gameService: GameService) {}
+  constructor(
+    @InjectRepository(Player)
+    private playerRepository: Repository<Player>,
+    private gameService: GameService,
+  ) {}
   /**
    * Get the game mode from the start screen.
    *
    * @return {*}  {string}
    * @memberof StartScreenService
    */
-  getGreeting(): string {
+  private getGreeting(): string {
     return GameConstants.GREETING_TEXST;
   }
+
   /**
-   * Get the player name and details from the start screen.
+   * Set the player details.
    *
-   * @return {Player}  {Player}
+   * @private
+   * @param {string} name
+   * @return {*}  {Promise<Player>}
    * @memberof StartScreenService
    */
-  getPlayerDetails(): Player {
-    return new Player();
+  async setPlayer(name: string): Promise<Player> {
+    const user = this.playerRepository.create(Player);
+    await this.playerRepository.save(name);
+    this.startGame();
+    return user;
   }
 
-  ConfirmInstructions(): Promise<boolean> {
+  private ConfirmInstructions(): Promise<boolean> {
     return new Promise((resolve) => {
       resolve(true);
     });
@@ -42,7 +53,7 @@ export class StartScreenService {
    * @return void
    * @memberof StartScreenService
    */
-  showInstructions(): void {
+  private showInstructions(): void {
     this.ConfirmInstructions() ? this.startGame() : this.deniedPopup();
   }
   /**
@@ -51,8 +62,8 @@ export class StartScreenService {
    * @return {*}  {void}
    * @memberof StartScreenService
    */
-  startGame(): Zone[] {
-    return this.gameService.setAllZones();
+  private startGame(): void {
+    this.gameService.setAllZones();
   }
   /**
    * Show the denied popup.`
@@ -60,7 +71,7 @@ export class StartScreenService {
    * @return {*}  {Error}
    * @memberof StartScreenService
    */
-  deniedPopup(): Error {
+  private deniedPopup(): Error {
     throw new Error(
       'Please accept the instructions to start the game. Thank you!',
     );

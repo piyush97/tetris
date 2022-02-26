@@ -15,7 +15,7 @@ export class Level {
    * @memberof Level
    */
   @PrimaryGeneratedColumn()
-  id: number;
+  private id: number;
 
   /**
    * Level of the player (current)

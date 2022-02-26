@@ -14,7 +14,7 @@ export class Player {
    * @memberof Player
    */
   @PrimaryGeneratedColumn()
-  id: number;
+  private id: number;
   /**
    * Name of the player
    *
@@ -22,7 +22,7 @@ export class Player {
    * @memberof Player
    */
   @Column()
-  name: string;
+  private name: string;
   /**
    * Is the player active?
    *
@@ -30,7 +30,7 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: true })
-  isActive: boolean;
+  private isActive: boolean;
   /**
    * Current level of the player (current) (1-10)
    *
@@ -38,7 +38,7 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: 0 })
-  currentLevel: number;
+  private currentLevel: number;
 
   /**
    * lines cleared by the player (current)
@@ -47,5 +47,5 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: 0 })
-  lines: number;
+  private lines: number;
 }

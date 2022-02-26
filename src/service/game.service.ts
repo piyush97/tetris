@@ -31,7 +31,7 @@ export class GameService implements IScreen {
       this.setHoldZone(),
     ];
   }
-  setGameZone(): Zone {
+  private setGameZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.GAME_ZONE,
       GameConstants.GAME_HEIGHT,
@@ -39,7 +39,7 @@ export class GameService implements IScreen {
       GameConstants.GAME_BACKGROUND_COLOR,
     );
   }
-  setHoldZone(): Zone {
+  private setHoldZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.HOLD_BLOCK_ZONE,
       GameConstants.HOLD_ZONE_HEIGHT,
@@ -48,7 +48,7 @@ export class GameService implements IScreen {
     );
   }
 
-  setScoreProfileZone(): Zone {
+  private setScoreProfileZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.SCORE_PROFILE_ZONE,
       GameConstants.SCORE_PROFILE_ZONE_HEIGHT,
@@ -56,7 +56,7 @@ export class GameService implements IScreen {
       GameConstants.GAME_BACKGROUND_COLOR,
     );
   }
-  setNextZon(): Zone {
+  private setNextZon(): Zone {
     return this.setZone(
       GameConstants.ZONES.NEXT_BLOCK_ZONE,
       GameConstants.HOLD_ZONE_HEIGHT,
@@ -64,7 +64,7 @@ export class GameService implements IScreen {
       GameConstants.GAME_BACKGROUND_COLOR,
     );
   }
-  onGameStart(): any[] {
+  private onGameStart(): any[] {
     return this.setAllZones();
   }
 }
