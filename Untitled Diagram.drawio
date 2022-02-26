@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-26T23:17:56.589Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" etag="s2TucsSA92Lt_tQqg54W" version="16.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-26T23:18:32.647Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" etag="EbAmlkkhc8pCMapVLHOZ" version="16.6.4" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1406" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -51,7 +51,7 @@
           <mxGeometry x="50" y="150" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-9" value="GameService" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="90" width="100" height="300" as="geometry" />
+          <mxGeometry x="410" y="80" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-10" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="FrCvDKRbt1Tq-J5Lvqsk-9">
           <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
@@ -79,9 +79,6 @@
             <mxPoint x="40" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-28" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="FrCvDKRbt1Tq-J5Lvqsk-15">
-          <mxGeometry x="55" y="120" width="10" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-18" value="Difficulty" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="80" width="100" height="300" as="geometry" />
         </mxCell>
@@ -101,15 +98,6 @@
               <mxPoint x="580" y="240" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-25" value="userDetails" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="80" width="100" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-26" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="FrCvDKRbt1Tq-J5Lvqsk-25">
-          <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="FrCvDKRbt1Tq-J5Lvqsk-27" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="FrCvDKRbt1Tq-J5Lvqsk-25">
-          <mxGeometry x="55" y="120" width="10" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
