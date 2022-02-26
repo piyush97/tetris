@@ -1,8 +1,10 @@
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { GameConstants } from 'src/constants/game.constants';
 import { Shape } from 'src/model/shape.entity';
 import { Repository } from 'typeorm';
 import { ShapeConstants } from './../constants/shape.constants';
+@Injectable()
 export class BlockGeneratorService {
   constructor(
     @InjectRepository(Shape)
@@ -24,6 +26,7 @@ export class BlockGeneratorService {
 
     return block;
   }
+
   getCurrentGameState() {
     return GameConstants.enumGameState.GAME_STATE_PLAY;
   }
