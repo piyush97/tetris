@@ -71,7 +71,7 @@ export class GameService implements IScreen {
    * @return {*}  {Zone}
    * @memberof GameService
    */
-  private setHoldZone(): Zone {
+  setHoldZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.HOLD_BLOCK_ZONE,
       GameConstants.HOLD_ZONE_HEIGHT,
@@ -86,7 +86,7 @@ export class GameService implements IScreen {
    * @return {*}  {Zone}
    * @memberof GameService
    */
-  private setScoreProfileZone(): Zone {
+  setScoreProfileZone(): Zone {
     return this.setZone(
       GameConstants.ZONES.SCORE_PROFILE_ZONE,
       GameConstants.SCORE_PROFILE_ZONE_HEIGHT,
