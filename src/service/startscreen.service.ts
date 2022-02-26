@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { NextBlockGeneratorService } from 'src/service/nextblockzone.service';
 import { Repository } from 'typeorm';
 import { GameConstants } from './../constants/game.constants';
 import { Player } from './../model/player.entity';
@@ -18,6 +19,7 @@ export class StartScreenService {
     private playerRepository: Repository<Player>,
     private gameService: GameService,
     private blockGeneratorService: BlockGeneratorService,
+    private nextBlockGeneratorService: NextBlockGeneratorService,
   ) {}
   /**
    * Get the game mode from the start screen.
@@ -67,6 +69,7 @@ export class StartScreenService {
   private startGame(): void {
     this.gameService.setAllZones();
     this.blockGeneratorService.startRolling();
+    this.nextBlockGeneratorService.generateStack();
   }
   /**
    * Show the denied popup.`

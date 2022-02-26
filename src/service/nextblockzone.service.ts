@@ -10,6 +10,7 @@ import { BlockGeneratorService } from './blockgenerator.service';
  */
 @Injectable()
 export class NextBlockGeneratorService {
+  stack: Shape[] = [];
   /**
    * Creates an instance of NextBlockGeneratorService.
    * @param {BlockGeneratorService} blockGeneratorService
@@ -23,8 +24,10 @@ export class NextBlockGeneratorService {
    * @memberof NextBlockGeneratorService
    */
   async generateStack() {
-    const stack: Shape[] = [];
-    stack.push(await this.blockGeneratorService.generateBlocks());
-    return stack;
+    this.stack.push(await this.blockGeneratorService.generateBlocks());
+    return this.stack;
+  }
+  getBlocks() {
+    this.stack.pop();
   }
 }

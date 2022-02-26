@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { IScreen } from 'src/abstract/screen.abstract';
 import { GameConstants } from 'src/constants/game.constants';
 import { Zone } from 'src/model/zone.entity';
+import { NextBlockGeneratorService } from './nextblockzone.service';
 /**
  * Game service class for the game module of the game.
  *
@@ -11,6 +12,7 @@ import { Zone } from 'src/model/zone.entity';
  */
 @Injectable()
 export class GameService implements IScreen {
+  constructor(private nextBlockGeneratorService: NextBlockGeneratorService) {}
   height: number;
   width: number;
   backgroundColor: string;
@@ -39,6 +41,7 @@ export class GameService implements IScreen {
    * @memberof GameService
    */
   setAllZones(): Zone[] {
+    this.nextBlockGeneratorService.generateStack();
     return [
       this.setGameZone(),
       this.setHoldZone(),
