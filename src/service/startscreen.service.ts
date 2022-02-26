@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { GameConstants } from './../constants/game.constants';
 import { Player } from './../model/player.entity';
+import { BlockGeneratorService } from './blockgenerator.service';
 import { GameService } from './game.service';
 /**
  * Startscreen service class for the startscreen module of the game.
@@ -16,6 +17,7 @@ export class StartScreenService {
     @InjectRepository(Player)
     private playerRepository: Repository<Player>,
     private gameService: GameService,
+    private blockGeneratorService: BlockGeneratorService,
   ) {}
   /**
    * Get the game mode from the start screen.
@@ -64,6 +66,7 @@ export class StartScreenService {
    */
   private startGame(): void {
     this.gameService.setAllZones();
+    this.blockGeneratorService.startRolling();
   }
   /**
    * Show the denied popup.`

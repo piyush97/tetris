@@ -10,6 +10,30 @@ import { IShape } from './../interface/shape.interface';
 @Entity('shape')
 export class Shape implements IShape {
   /**
+   * Creates an instance of Shape.
+   * @param {string} name
+   * @param {string} color
+   * @param {number} width
+   * @param {number} height
+   * @param {number} x
+   * @param {number} y
+   * @memberof Shape
+   */
+  constructor(
+    name: string,
+    color: string,
+    width: number,
+    height: number,
+    x: number,
+    y: number,
+  ) {
+    this.color = color;
+    this.height = height;
+    this.width = width;
+    this.x = x;
+    this.y = y;
+  }
+  /**
    * The shape's identifier. This is used to identify the shape. It is also used to identify the shape in the database.
    *
    * @type {number}

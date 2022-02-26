@@ -13,6 +13,9 @@ export class ShapeConstants {
     MIRRORED_L: 'mirrored-l-shape',
     I: 'i-shape',
   };
+
+  static readonly HEIGHT_SQUARE = 2;
+  static readonly WIDTH_SQUARE = 2;
   /**
    * Tells what side shape is falling on
    *
