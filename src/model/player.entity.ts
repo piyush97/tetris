@@ -7,6 +7,10 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
  */
 @Entity('player')
 export class Player {
+  constructor(name: string) {
+    this.name = name;
+  }
+
   /**
    * Id of the player (unique)
    *
@@ -14,7 +18,7 @@ export class Player {
    * @memberof Player
    */
   @PrimaryGeneratedColumn()
-  private id: number;
+  id: number;
   /**
    * Name of the player
    *
@@ -22,7 +26,7 @@ export class Player {
    * @memberof Player
    */
   @Column()
-  private name: string;
+  name: string;
   /**
    * Is the player active?
    *
@@ -30,7 +34,7 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: true })
-  private isActive: boolean;
+  isActive: boolean;
   /**
    * Current level of the player (current) (1-10)
    *
@@ -38,7 +42,7 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: 0 })
-  private currentLevel: number;
+  currentLevel: number;
 
   /**
    * lines cleared by the player (current)
@@ -47,5 +51,5 @@ export class Player {
    * @memberof Player
    */
   @Column({ default: 0 })
-  private lines: number;
+  lines: number;
 }

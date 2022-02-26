@@ -10,7 +10,7 @@ export class BlockGeneratorService {
     @InjectRepository(Shape)
     private shapeRepository: Repository<Shape>,
   ) {}
-  async generateBlocks() {
+  async generateBlocks(): Promise<Shape> {
     console.log('Generating Random blocks');
     const block = this.shapeRepository.create(
       new Shape(

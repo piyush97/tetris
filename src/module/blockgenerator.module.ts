@@ -8,4 +8,4 @@ import { BlockGeneratorService } from './../service/blockgenerator.service';
   providers: [BlockGeneratorService],
   controllers: [],
 })
-export class GameModule {}
+export class BlockGeneratorModule {}

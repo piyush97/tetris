@@ -38,8 +38,8 @@ export class StartScreenService {
    * @memberof StartScreenService
    */
   async setPlayer(name: string): Promise<Player> {
-    const user = this.playerRepository.create(Player);
-    await this.playerRepository.save(name);
+    const user = this.playerRepository.create(new Player(name));
+    await this.playerRepository.save(user);
     this.startGame();
     return user;
   }
