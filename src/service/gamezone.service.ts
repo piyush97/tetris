@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Score } from './../model/score.entity';
 import { GameService } from './game.service';
 /**
  * GameZoneService
@@ -8,7 +9,7 @@ import { GameService } from './game.service';
  */
 @Injectable()
 export class GameZone {
-  constructor(private gameservice: GameService) {}
+  constructor(private gameservice: GameService, private score: Score) {}
   /**
    * Generate game Zone
    *
@@ -17,5 +18,31 @@ export class GameZone {
    */
   generateZone() {
     return this.gameservice.setGameZone();
+  }
+  /**
+   * Falling Block
+   *
+   * @return {*}
+   * @memberof GameZone
+   */
+  fallingBlock() {
+    return this.fallingBlock();
+  }
+  /**
+   * Collison Detection for falling block and increases the score
+   *
+   * @return {*}
+   * @memberof GameZone
+   */
+  collision() {
+    return this.collision();
+  }
+  /**
+   * Score increments
+   *
+   * @memberof GameZone
+   */
+  scoreIncrement() {
+    this.scoreIncrement();
   }
 }
