@@ -119,4 +119,13 @@ export class GameService implements IScreen {
   private onGameStart(): any[] {
     return this.setAllZones();
   }
+  /**
+   * Rotate the tetramino
+   *
+   * @return {*}  {number}
+   * @memberof GameService
+   */
+  rotate(): number {
+    return this.rotate();
+  }
 }
