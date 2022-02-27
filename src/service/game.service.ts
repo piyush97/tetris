@@ -125,7 +125,26 @@ export class GameService implements IScreen {
    * @return {*}  {number}
    * @memberof GameService
    */
-  rotate(): number {
-    return this.rotate();
+  rotate(): void {
+    this.rotate();
+  }
+
+  /**
+   * hold the tetramino
+   *
+   * @return {*}  {number}
+   * @memberof GameService
+   */
+  hold(): void {
+    this.hold();
+  }
+  /**
+   * move the tetramino
+   *
+   * @return {*}  {number}
+   * @memberof GameService
+   */
+  move(): void {
+    this.move();
   }
 }

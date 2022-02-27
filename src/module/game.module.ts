@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { GameController } from 'src/controller/game.controller';
 import { Level } from 'src/model/level.entity';
 import { Player } from 'src/model/player.entity';
 import { Score } from 'src/model/score.entity';
@@ -15,6 +16,6 @@ import { GameService } from './../service/game.service';
     TypeOrmModule.forFeature([Player, Zone, Shape, Score, Level]),
   ],
   providers: [GameService],
-  controllers: [],
+  controllers: [GameController],
 })
 export class GameModule {}
