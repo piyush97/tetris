@@ -100,15 +100,29 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/GameModule.html" data-type="entity-link" >GameModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#controllers-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' : 'data-target="#xs-controllers-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' }>
+                                            <span class="icon ion-md-swap"></span>
+                                            <span>Controllers</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' :
+                                            'id="xs-controllers-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' }>
+                                            <li class="link">
+                                                <a href="controllers/GameController.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GameController</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-GameModule-7ec0e1b1cf6b791c8dc55562e76cdfedb3880c93a04a22a8edc19dd52d26f39f5b6784efdd5610030ec9e281c65ff75eb0f5bd75f6b9d0204a91e7f08e13c2f0"' : 'data-target="#xs-injectables-links-module-GameModule-7ec0e1b1cf6b791c8dc55562e76cdfedb3880c93a04a22a8edc19dd52d26f39f5b6784efdd5610030ec9e281c65ff75eb0f5bd75f6b9d0204a91e7f08e13c2f0"' }>
+                                        'data-target="#injectables-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' : 'data-target="#xs-injectables-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-GameModule-7ec0e1b1cf6b791c8dc55562e76cdfedb3880c93a04a22a8edc19dd52d26f39f5b6784efdd5610030ec9e281c65ff75eb0f5bd75f6b9d0204a91e7f08e13c2f0"' :
-                                        'id="xs-injectables-links-module-GameModule-7ec0e1b1cf6b791c8dc55562e76cdfedb3880c93a04a22a8edc19dd52d26f39f5b6784efdd5610030ec9e281c65ff75eb0f5bd75f6b9d0204a91e7f08e13c2f0"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' :
+                                        'id="xs-injectables-links-module-GameModule-a2f325e7c776c8e308a69871cfc0898c3c41444fbac24efb403137acc21ed3898c3b6c678f185864085677e13c5c662235ac43c768d8e2a12a0d94d4ffdf4664"' }>
                                         <li class="link">
                                             <a href="injectables/GameService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GameService</a>
                                         </li>
@@ -250,6 +264,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#controllers-links"' :
+                                'data-target="#xs-controllers-links"' }>
+                                <span class="icon ion-md-swap"></span>
+                                <span>Controllers</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="controllers-links"' : 'id="xs-controllers-links"' }>
+                                <li class="link">
+                                    <a href="controllers/GameController.html" data-type="entity-link" >GameController</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#entities-links"' :
                                 'data-target="#xs-entities-links"' }>

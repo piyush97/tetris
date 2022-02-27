@@ -37,7 +37,7 @@
 
 <ol class="breadcrumb">
   <li>Controllers</li>
-  <li >StartScreenController</li>
+  <li >GameController</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/controller/startscreen.controller.ts</code>
+            <code>src/controller/game.controller.ts</code>
         </p>
 
 
@@ -64,7 +64,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>StartScreenController is the controller for the start screen.</p>
+                <p>GameController is the controller for the game.</p>
 
             </p>
 
@@ -86,8 +86,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                    <span class="modifier">Async</span>
-                                <a href="#setPlayer" >setPlayer</a>
+                                <a href="#hold" >hold</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#move" >move</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#rotate" >rotate</a>
                             </li>
                         </ul>
                     </td>
@@ -110,19 +117,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="setPlayer"></a>
+                    <a name="hold"></a>
                     <span class="name">
                         <span class="modifier">Private</span>
-                        <span class="modifier">Async</span>
-                        <span ><b>setPlayer</b></span>
-                        <a href="#setPlayer"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>hold</b></span>
+                        <a href="#hold"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setPlayer(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>hold()</code>
                 </td>
             </tr>
 
@@ -130,58 +136,139 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;/player&#x27;)<br /></code>
+                    <code>@Get(&#x27;/hold&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/controller/startscreen.controller.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/controller/game.controller.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Set the player details</p>
+                    <div class="io-description"><p>Hold the tetramino</p>
 </div>
 
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>name</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../entitys/Player.html" target="_self" >Promise&lt;Player&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>{Promise<Player>}</p>
+                        <p>{void}</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="move"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>move</b></span>
+                        <a href="#move"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>move()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/move&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/controller/game.controller.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Move the tetramino</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>{void}</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rotate"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>rotate</b></span>
+                        <a href="#rotate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>rotate()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/rotate&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/controller/game.controller.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Rotate the tetramino</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>{void}</p>
 
                     </div>
                 </td>
@@ -192,30 +279,49 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Query } from &#x27;@nestjs/common&#x27;;
-import { Player } from &#x27;src/model/player.entity&#x27;;
-import { StartScreenService } from &#x27;../service/startscreen.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
+import { GameService } from &#x27;src/service/game.service&#x27;;
 /**
- * StartScreenController is the controller for the start screen.
+ * GameController is the controller for the game.
  *
  * @export
- * @class StartScreenController
+ * @class GameController
  */
 @Controller()
-export class StartScreenController {
-  constructor(private readonly startScreenService: StartScreenService) {}
-
+export class GameController {
+  constructor(private readonly gameservice: GameService) {}
   /**
-   * Set the player details
+   * Rotate the tetramino
    *
    * @private
-   * @param {string} name
-   * @return {*}  {Promise&lt;Player&gt;}
-   * @memberof StartScreenController
+   * @return {*}  {void}
+   * @memberof GameController
    */
-  @Get(&#x27;/player&#x27;)
-  private async setPlayer(@Query(&#x27;name&#x27;) name: string): Promise&lt;Player&gt; {
-    return this.startScreenService.setPlayer(name);
+  @Get(&#x27;/rotate&#x27;)
+  private rotate(): void {
+    return this.gameservice.rotate();
+  }
+  /**
+   * Hold the tetramino
+   *
+   * @private
+   * @return {*}  {void}
+   * @memberof GameController
+   */
+  @Get(&#x27;/hold&#x27;)
+  private hold(): void {
+    return this.gameservice.hold();
+  }
+  /**
+   * Move the tetramino
+   *
+   * @private
+   * @return {*}  {void}
+   * @memberof GameController
+   */
+  @Get(&#x27;/move&#x27;)
+  private move(): void {
+    return this.gameservice.move();
   }
 }
 </code></pre>
@@ -263,7 +369,7 @@ export class StartScreenController {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'StartScreenController.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GameController.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

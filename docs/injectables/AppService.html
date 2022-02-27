@@ -79,7 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getHello" >getHello</a>
+                                <a href="#healthCheck" >healthCheck</a>
                             </li>
                         </ul>
                     </td>
@@ -103,16 +103,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getHello"></a>
+                    <a name="healthCheck"></a>
                     <span class="name">
-                        <span ><b>getHello</b></span>
-                        <a href="#getHello"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>healthCheck</b></span>
+                        <a href="#healthCheck"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getHello()</code>
+<code>healthCheck()</code>
                 </td>
             </tr>
 
@@ -146,8 +146,8 @@
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return &#x27;Hello World!&#x27;;
+  healthCheck(): string {
+    return &#x27;tetris is up&#x27;;
   }
 }
 </code></pre>

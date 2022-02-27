@@ -149,6 +149,15 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
+                    <h3>Controllers<a href="https://docs.nestjs.com/controllers" target="_blank" title="Official documentation about module controllers"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../controllers/GameController.html">GameController</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
                     <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
@@ -170,6 +179,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Module } from &#x27;@nestjs/common&#x27;;
 import { TypeOrmModule } from &#x27;@nestjs/typeorm&#x27;;
+import { GameController } from &#x27;src/controller/game.controller&#x27;;
 import { Level } from &#x27;src/model/level.entity&#x27;;
 import { Player } from &#x27;src/model/player.entity&#x27;;
 import { Score } from &#x27;src/model/score.entity&#x27;;
@@ -185,7 +195,7 @@ import { GameService } from &#x27;./../service/game.service&#x27;;
     TypeOrmModule.forFeature([Player, Zone, Shape, Score, Level]),
   ],
   providers: [GameService],
-  controllers: [],
+  controllers: [GameController],
 })
 export class GameModule {}
 </code></pre>
